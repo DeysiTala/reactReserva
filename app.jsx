@@ -51,6 +51,8 @@ const App = ({title, seats}) => {
    return (
       <div>
         <div>
+          <h1>Reserva de Pasajes</h1>
+          <br></br>
          <RTable  seats = {seats}/>
        
          <h3>  {title}</h3>
@@ -60,7 +62,8 @@ const App = ({title, seats}) => {
          <br></br>
          <br></br>
                  
-              
+    <h3>Datos Pasajeros</h3>
+    <br></br>          
    <p>Nombre: <input type="text"></input></p>
    <p>Apellido: <input type="text"></input></p>
    <p>DNI: <input type="text"></input></p>
