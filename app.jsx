@@ -34,21 +34,38 @@ function listPairs (seats) {
       );
    });
 }
-const Input = (props) => (
-  <input type='text' placeholder={ props.placeholder } />
-);
+function AppDatos (props)  {
+  let  asd = 'NANANANA';
+   return (
+      <div>
+                 <p>{asd}</p>
+              
+   <p>Nombre: <input type="text"></input></p>
+               </div>
+    
+   );
+}
+
  
 const App = ({title, seats}) => {
    return (
       <div>
-        
+        <div>
          <RTable  seats = {seats}/>
        
          <h3>  {title}</h3>
          <ol>
             {listPairs (seats)}
          </ol>
-       
+         <br></br>
+         <br></br>
+                 
+              
+   <p>Nombre: <input type="text"></input></p>
+   <p>Apellido: <input type="text"></input></p>
+   <p>DNI: <input type="text"></input></p>
+               
+      </div>
       </div>
     
    );
@@ -61,41 +78,12 @@ let seats = [
    [1, 5, 9, 13, 17, 21, 25, 29]
 ]
 
-  let pasajeros = [
-    {
-      "name": "Susy Deysi",
-      "lastname": "Talavera Cardenas",
-      "DNI": 46252793,
-      "completed": false
-    },
-    {
-      "name": "Susy Deysi",
-      "lastname": "Talavera Cardenas",
-      "DNI": 46252793,
-      "completed": false
-    },
-    {
-      "name": "Susy Deysi",
-      "lastname": "Talavera Cardenas",
-      "DNI": 46252793,
-      "completed": false
-    },
-    
-]
-let html = "";
-for (var i =0; i<pasajeros.length;i++){
-let datos = pasajeros[i];
-let salida = 
-
-  "<li>" +  datos.name + datos.lastname + datos.DNI "</li> " /*+ " <button>" +"Eliminar"+ "</button>"*/;
-html += salida;
-}
-document.getElementById("root").innerHTML+= html;
-
-
 ReactDOM.render ( 
    <App title = {'Asientos reservados'}  seats = {seats} />, 
    document.getElementById("root")
    
+   
 ); 
- 
+ /*ReactDOM.render(
+<AppDatos algo={AppDatos} /> , document.getElementById("root")
+ );*/
